@@ -11,17 +11,15 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.mo_said.azkar.R;
-import com.mo_said.azkar.RcClickInterface;
-import com.mo_said.azkar.ShowData;
+import com.mo_said.azkar.ShowAd3ia;
 
 import java.util.ArrayList;
 
 public class RvAd3iaAdapter extends RecyclerView.Adapter<RvAd3iaAdapter.RvAd3iaViewHolder> {
-    ArrayList<ModelAd3ia> arrayList_;
-    private RcClickInterface rcClickInterface ;
+    ArrayList<Model> arrayList_;
     Context mContext;
 
-    public RvAd3iaAdapter(ArrayList<ModelAd3ia> arrayList_,Context mContext) {
+    public RvAd3iaAdapter(ArrayList<Model> arrayList_, Context mContext) {
         this.arrayList_ = arrayList_;
         this.mContext = mContext;
     }
@@ -58,9 +56,8 @@ public class RvAd3iaAdapter extends RecyclerView.Adapter<RvAd3iaAdapter.RvAd3iaV
 
     }
     void Intent(int pd,View view){
-        Intent n =new Intent(view.getContext(), ShowData.class);
+        Intent n = new Intent(view.getContext(), ShowAd3ia.class);
         n.putExtra("ii",arrayList_.get(pd).title);
-        n.putExtra("id",pd);
         n.putExtra("io",pd);
         mContext.startActivity(n);
 

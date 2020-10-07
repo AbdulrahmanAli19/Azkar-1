@@ -13,9 +13,9 @@ import com.mo_said.azkar.R;
 import java.util.ArrayList;
 
 public class RvDo3a2ItemAdapter extends RecyclerView.Adapter<RvDo3a2ItemAdapter.RvDo3a2ItemViewHolder> {
-    ArrayList<ModelAd3ia> arrayList;
+    ArrayList<Model> arrayList;
 
-    public RvDo3a2ItemAdapter(ArrayList<ModelAd3ia> arrayList) {
+    public RvDo3a2ItemAdapter(ArrayList<Model> arrayList) {
         this.arrayList = arrayList;
     }
 

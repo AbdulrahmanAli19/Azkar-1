@@ -43,4 +43,10 @@ dependencies {
     implementation "androidx.room:room-runtime:$room_version"
     annotationProcessor "androidx.room:room-compiler:$room_version"
 
+    //ViewPager
+    implementation "androidx.viewpager2:viewpager2:1.0.0"
+
+    //RoundedImageView
+    implementation "com.makeramen:roundedimageview:2.3.0"
+
 }

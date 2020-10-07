@@ -13,7 +13,6 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.mo_said.azkar.R;
 import com.mo_said.azkar.ShowAzkar;
-import com.mo_said.azkar.ShowData;
 
 import java.util.ArrayList;
 

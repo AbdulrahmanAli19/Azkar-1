@@ -1,12 +1,12 @@
 package com.mo_said.azkar.Splach;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 
-import com.mo_said.azkar.Home.HomeActivity;
+import androidx.appcompat.app.AppCompatActivity;
+
+import com.mo_said.azkar.HomeActivity;
 import com.mo_said.azkar.R;
 
 public class SplachActivity extends AppCompatActivity {

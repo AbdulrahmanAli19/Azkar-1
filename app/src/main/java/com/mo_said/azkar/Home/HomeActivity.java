@@ -1,42 +1,31 @@
 package com.mo_said.azkar.Home;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.Fragment;
-
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
 
-import com.mo_said.azkar.Fragment.Elseb7aFragment;
-import com.mo_said.azkar.Fragment.Ad3iaFragment;
-import com.mo_said.azkar.Fragment.AzkarFragment;
-import com.mo_said.azkar.R;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
 
-import java.util.ArrayList;
+import com.mo_said.azkar.R;
+import com.mo_said.azkar.ShowElseb7a;
 
 public class HomeActivity extends AppCompatActivity implements View.OnClickListener{
     //Views
     ImageButton mAzkarBarButton;
     ImageButton mAd3iaBarButton;
     ImageButton mElseb7aBarButton;
-
-
+    ImageButton mHomeBarButton;
     LinearLayout mPageContiner;
 
 
-    AzkarFragment azkarFragment;
-    Ad3iaFragment ad3iaFragment;
-    Elseb7aFragment elseb7aFragment;
 
-
-    ArrayList<String> arrayList;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
-        azkarFragment = new AzkarFragment();
-        changeFragment(azkarFragment);
          iniViews();
 
     }
@@ -44,6 +33,9 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
 
 
     private void iniViews() {
+        mHomeBarButton = findViewById(R.id.home_bar_button);
+        mHomeBarButton.setOnClickListener(this);
+
         mAzkarBarButton = findViewById(R.id.azkar_bar_button);
         mAzkarBarButton.setOnClickListener(this);
 
@@ -53,8 +45,8 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
         mElseb7aBarButton = findViewById(R.id.elseb7a_bar_button);
         mElseb7aBarButton.setOnClickListener(this);
 
+
         mPageContiner = findViewById(R.id.pagecontanier);
-        elseb7aFragment = new Elseb7aFragment();
 
 
     }
@@ -62,20 +54,12 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
 
     @Override
     public void onClick(View view) {
-        switch (view.getId()){
-            case R.id.azkar_bar_button:
-                azkarFragment = new AzkarFragment();
-                changeFragment(azkarFragment);
+        switch (view.getId()) {
 
-                break;
-            case R.id.ad3ia_bar_button:
-                ad3iaFragment = new Ad3iaFragment();
-                changeFragment(ad3iaFragment);
 
-                break;
             case R.id.elseb7a_bar_button:
-                changeFragment(elseb7aFragment);
-
+                Intent n = new Intent(HomeActivity.this, ShowElseb7a.class);
+                startActivity(n);
                 break;
 
 
